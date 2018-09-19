@@ -73,24 +73,4 @@ public class Stepdefs {
 
         assertEquals(200,create_res.statusCode());
     }
-
-    @Given("^a team members id$")
-    public void a_team_members_id() throws Exception {
-        FileInputStream files = new FileInputStream("src\\test\\java\\config\\env.properties");
-        prop.load(files);
-    }
-
-    @When("^request to delete this team members$")
-    public void request_to_delete_this_team_members() throws Exception {
-
-        String id = "4";
-        RestAssured.baseURI= prop.getProperty("BookingsHost");
-        this.delete_res = given().pathParam("id",id).
-                when().get("/bookings/delete/{id}");
-    }
-
-    @Then("^this team members record should be deleted$")
-    public void this_team_members_record_should_be_deleted() throws Exception {
-        assertEquals(200,delete_res.statusCode());
-    }
 }
