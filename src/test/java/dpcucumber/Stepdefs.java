@@ -83,7 +83,7 @@ public class Stepdefs {
     @When("^request to delete this team members$")
     public void request_to_delete_this_team_members() throws Exception {
 
-        String id = "2";
+        String id = "4";
         RestAssured.baseURI= prop.getProperty("BookingsHost");
         this.delete_res = given().pathParam("id",id).
                 when().get("/bookings/delete/{id}");
