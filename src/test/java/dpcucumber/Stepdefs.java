@@ -35,7 +35,7 @@ public class Stepdefs {
     public void a_request_is_sent() throws Exception {
         RestAssured.baseURI= prop.getProperty("BookingsHost");
         this.all_res = given().
-                when().get("/bookings/all");
+                when().get("/teammanatement/all");
     }
 
     @Then("^all team members should be returned$")
@@ -55,7 +55,7 @@ public class Stepdefs {
         RestAssured.baseURI= prop.getProperty("BookingsHost");
         this.create_res = given().header("Content-Type","application/json").
                 body(Payload.getCreateBooking()).
-                when().post("/bookings/create");
+                when().post("/teammanatement/create");
     }
 
     @Then("^a new team members should be created$")
