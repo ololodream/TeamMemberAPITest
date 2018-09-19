@@ -40,7 +40,7 @@ public class Stepdefs {
 
     @Then("^all team members should be returned$")
     public void all_team_members_should_be_returned() throws Exception {
-        assertEquals(201,all_res.statusCode());
+        assertEquals(200,all_res.statusCode());
     }
 
     @Given("^a team member's record$")
