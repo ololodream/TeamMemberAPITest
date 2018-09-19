@@ -44,7 +44,7 @@ public class Payload {
 	{
 		String body = "{\n" +
 				"\t\"name\":\"Trump\",\n" +
-				"\t\"gender\": \"F\",\n" +
+				"\t\"gender\": \"M\",\n" +
 				"\t\"hobby\": \"Money\"\n" +
 				"}";
 		return body;
